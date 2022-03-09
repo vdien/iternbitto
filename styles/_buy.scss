@@ -1,0 +1,190 @@
+@import "animations";
+.buy {
+  padding: 20px 0 90px;
+  margin-bottom: 60px;
+  @include tablet-plus {
+    margin-bottom: 0;
+    padding: 40px 0 70px;
+  }
+  &__container {
+    width: 85vw;
+    margin: auto;
+    @include desktop {
+      width: 95vw;
+    }
+    @include tablet-plus {
+      width: 90vw;
+    }
+    @include tablet {
+      width: 90vw;
+    }
+    @include tablet-sm {
+      width: 90%;
+    }
+    @include mobile-plus {
+      width: 85vw;
+    }
+    &--title {
+      padding-right: 20px;
+      margin: 15px;
+      @include desktop {
+        padding: 0;
+        margin: 0;
+        margin-right: 15px;
+      }
+      @include tablet-plus {
+        margin: 0;
+      }
+      span {
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 65px;
+        text-transform: uppercase;
+        color: $orange__color;
+        @include desktop {
+          font-size: 45px;
+        }
+        @include tablet-plus {
+          font-size: 30px;
+        }
+      }
+    }
+    &--item {
+      &--box {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 3;
+        padding: 20px 30px 100px;
+        margin-top: -65px;
+        @include tablet-plus {
+          margin-top: 0;
+          padding: 20px 15px 30px;
+        }
+        h5 {
+          margin: 20px 0 10px;
+          font-size: 25px;
+          font-weight: bold;
+          color: $dark__color;
+          span {
+            text-transform: uppercase;
+            color: $white__color;
+          }
+          @include desktop {
+            font-size: 22px;
+          }
+        }
+        p {
+          margin: 15px 0;
+          line-height: 1.3;
+          color: $dark--gray__color;
+          font-size: 17px;
+        }
+        a {
+          text-decoration: underline;
+          color: $dark__color;
+        }
+      }
+      &--img {
+        position: absolute;
+        bottom: -115px;
+        height: 180px;
+        right: 0;
+        overflow: hidden;
+        @include desktop {
+          height: 150px;
+        }
+        @include tablet-plus {
+          height: 250px;
+          position: unset;
+        }
+        @include tablet1 {
+          display: none;
+        }
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+    &--sell {
+      &--box {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 3;
+        padding: 20px 30px 100px;
+        margin-top: -65px;
+        @include tablet-plus {
+          margin-top: 0;
+          padding: 20px 15px 30px;
+        }
+        h5 {
+          margin: 20px 0 10px;
+          font-size: 25px;
+          font-weight: bold;
+          color: $white__color;
+          span {
+            text-transform: uppercase;
+            color: $orange__color;
+          }
+          @include desktop {
+            font-size: 22px;
+          }
+        }
+        p {
+          margin: 15px 0;
+          line-height: 1.3;
+          color: $white__color;
+          font-size: 17px;
+        }
+        a {
+          text-decoration: underline;
+          color: $white__color;
+        }
+      }
+      &--img {
+        position: absolute;
+        bottom: -115px;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        @include desktop {
+          height: 150px;
+        }
+
+        @include tablet-plus {
+          height: 250px;
+          position: unset;
+        }
+        @include tablet1 {
+          display: none;
+        }
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+.bounceInLeft {
+  opacity: 0;
+  transform: translateX(-400px);
+  &.go {
+    animation: bounceInLeft 1s;
+    animation-fill-mode: both;
+  }
+}
+.bounceInRight {
+  opacity: 0;
+  transform: translateX(-400px);
+  &.go {
+    animation: bounceInRight 1s;
+    animation-fill-mode: both;
+  }
+}

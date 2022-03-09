@@ -4,36 +4,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./libs/slick.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
   <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="./styles/reset.css">
   <title>Document</title>
 </head>
 
 <body>
-
-  <!-- Navbar Section -->
-  <nav class="navbar">
-    <a href="/" class="navbar__logo"><img src="images/logo-white.png" alt=""></a>
-    <div class="navbar__bars"><i class="fas fa-bars"></i></div>
-    <div class="navbar__menu">
-      <a href="/" class="navbar__menu--links">Trang chủ</a>
-      <a href="/" class="navbar__menu--links">Giới thiệu</a>
-      <a href="/" class="navbar__menu--links">Sản phẩm</a>
-      <a href="/" class="navbar__menu--links">Dịch vụ</a>
-      <a href="/" class="navbar__menu--links">So sánh xe</a>
-      <a href="/" class="navbar__menu--links">Tin tức</a>
-      <a href="/" class="navbar__menu--links">Phong thủy xe</a>
-      <a href="/" class="navbar__menu--links">Liên hệ</a>
+  <section class="header">
+    <div class="header__menu">
+      <div class="row align-center">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+          <div class="header__logo">
+            <img src="./images/logo-white.png" alt="logo" />
+          </div>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
+          <div class="header__menu--icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="header__menu--overlay"></div>
+          <div class="header__menu--nav">
+            <div class="menu__title">
+              <h5>Menu</h5>
+              <a class="menu__close">+</a>
+            </div>
+            <li class="active"><a href="./index.html">Trang chủ</a></li>
+            <li><a href="./about.html">Giới thiệu</a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">So sánh xe</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Phong thủy xe</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </div>
+        </div>
+      </div>
     </div>
-  </nav>
+    <div class="header__banner">
+      <div class="header__banner--slider">
+        <img src="./images/xe-sedan.jpg" alt="" />
+        <img src="./images/xe-sedan.jpg" alt="" />
+      </div>
 
-  <!-- kay Section -->
-  <div class="banner">
-    <div class="banner__container">
-      <img src="images/xe-sedan.jpg" alt="alien" class="banner__container--img" />
+      <!-- button -->
+
+      <button class="header__banner--btn prev">
+        <img src="./images/left.png" alt="" />
+      </button>
+      <button class="header__banner--btn next">
+        <img src="./images/right.png" alt="" />
+      </button>
+
+      <!-- dot -->
+      <div class="header__banner--dots">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="search__bar">
+        <form>
+          <div class="row justify-center align-center">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+              <div class="search__bar--form">
+                <label>Tìm loại xe</label>
+                <select>
+                  <option value="#">Tìm kiếm thoeo loại xe</option>
+                  <option value="toyota">Toyota</option>
+                  <option value="kia">Kia</option>
+                  <option value="hyundai">Hyundai</option>
+                  <option value="ford">Ford</option>
+                  <option value="mercedes benz">Mercedes Benz</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+              <div class="search__bar--form">
+                <label>Tìm loại xe</label>
+                <select>
+                  <option value="#">Tìm kiếm thoeo loại xe</option>
+                  <option value="toyota">Toyota</option>
+                  <option value="kia">Kia</option>
+                  <option value="hyundai">Hyundai</option>
+                  <option value="ford">Ford</option>
+                  <option value="mercedes benz">Mercedes Benz</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+              <div class="search__bar--btn">
+                <button>Tìm kiếm</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
+  </section>
+  <section class="buy">
+    <div class="buy__container">
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <div class="buy__container--title">
+            <span>Mua bán trao đổi </span>
+            <span style="color: black"> xe lướt uy tín</span>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <div class="buy__container--item">
+            <div class="buy__container--item--box" style="
+                      background-image: linear-gradient(
+                          0deg,
+                          rgba(255, 111, 36, 0.8),
+                          rgba(255, 111, 36, 0.8)
+                        ),
+                        url('./images/buy.jpeg');
+                    ">
+              <h5>Bạn muốn <span>mua xe</span></h5>
+              <p>
+                Kay Auto sẽ nhanh chóng tìm Ngay và Đúng dòng xe mà bạn yêu
+                thích.
+              </p>
+              <a href="">Xem chi tiết</a>
+              <div class="buy__container--item--img bounceInLeft">
+                <img src="./images/toyota-camry.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <div class="buy__container--sell">
+            <div class="buy__container--sell--box" style="
+                      background-image: linear-gradient(
+                          0deg,
+                          rgba(35, 36, 37, 0.8),
+                          rgba(35, 36, 37, 0.8)
+                        ),
+                        url('./images/sell.jpeg');
+                    ">
+              <h5>Bạn muốn <span>bán xe</span></h5>
+              <p>
+                Kay Auto thu mua xe TẠI NHÀ giá cao, uy tín và thanh toán
+                nhanh chóng.
+              </p>
+              <a href="">Xem chi tiết</a>
+
+              <div class="buy__container--sell--img bounceInRight">
+                <img src="./images/honda-civic.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
+
+<script src="./libs/jquery.js"></script>
+<script src="./libs/slick.js"></script>
+<script src="./js/app.js"></script>
 
 </html>
