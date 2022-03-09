@@ -1,19 +1,5 @@
 // scroll to top
-const btnScroll = document.querySelector(".scrollToTop");
-function showScroll() {
-  if (window.scrollY > 150) {
-    btnScroll.style.display = "block";
-    btnScroll.classList.add("visible");
-  } else {
-    btnScroll.classList.remove("visible");
-    btnScroll.style.display = "none";
-  }
-}
 
-// btnScroll.addEventListener("click", () => {
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-// });
 /// menu
 const btnOpen = document.querySelector(".header__menu--icon");
 const listMenu = document.querySelector(".header__menu--nav");
@@ -112,77 +98,3 @@ window.addEventListener("load", () => {
     });
   });
 });
-const prev = `<button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="display: block;"><img src='./images/left.png' alt=''></button>`;
-const next = `<button class="slick-next slick-arrow" aria-label="Next" type="button" style="display: block;"><img src='./images/right.png' alt=''></button>`;
-// service
-if ($(".service__main").length > 0) {
-  let count = $(".service__count");
-  let element = $(".service__main");
-  element.on("init reInit afterChange", (e, slick, current, next) => {
-    let i = current ? current : 0;
-    count.html(`0${i + 1} / 0${slick.slideCount}`);
-  });
-}
-$(".service__main").slick({
-  slidesToShow: 1,
-  arrows: true,
-  prevArrow: prev,
-  nextArrow: next,
-  autoplay: true,
-  autoplaySpeed: 1000,
-
-  infinite: true,
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        arrows: false,
-        dots: true,
-      },
-    },
-  ],
-});
-//gallery
-$(".gallery .gallery__list").slick({
-  centerMode: true,
-  centerPadding: "30px",
-  slidesToShow: 3,
-  arrows: true,
-  prevArrow: prev,
-  nextArrow: next,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: "30px",
-        slidesToShow: 2,
-      },
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        dots: true,
-        centerMode: false,
-        slidesToShow: 2,
-      },
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        dots: true,
-        centerMode: false,
-        slidesToShow: 1,
-      },
-    },
-  ],
-});
-//scroll window
-window.onscroll = function () {
-  showScroll();
-  loadCar();
-  // console.log(window.scrollY);
-};
