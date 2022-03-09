@@ -98,3 +98,9 @@ window.addEventListener("load", () => {
     });
   });
 });
+//scroll window
+window.onscroll = function () {
+  // showScroll();
+  loadCar();
+  // console.log(window.scrollY);
+};
