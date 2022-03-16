@@ -1,3 +1,50 @@
 @import "header";
 @import "search-bar";
 @import "buy";
+@import "products";
+@import "service";
+@import "header";
+@import "right-menu";
+@import "left-menu";
+@import "search-bar";
+@import "scrollToTop";
+@import "news";
+@import "buy";
+@import "products";
+@import "footer";
+@import "gallery";
+@import "service";
+@import "about";
+
+.slick-prev {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.493);
+    color: $white__color;
+    border: unset;
+
+    cursor: pointer;
+    padding: 10px 20px;
+
+    @include tablet-plus {
+        visibility: hidden;
+    }
+}
+
+.slick-next {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.493);
+    color: $white__color;
+    border: unset;
+    cursor: pointer;
+    padding: 10px 20px;
+
+    @include tablet-plus {
+        visibility: hidden;
+    }
+}

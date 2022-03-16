@@ -1,3 +1,19 @@
+// scroll to top
+const btnScroll = document.querySelector(".scrollToTop");
+function showScroll() {
+  if (window.scrollY > 150) {
+    btnScroll.style.display = "block";
+    btnScroll.classList.add("visible");
+  } else {
+    btnScroll.classList.remove("visible");
+    btnScroll.style.display = "none";
+  }
+}
+
+btnScroll.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
 const btnOpenb = document.querySelector(".headerb__menu--icon");
 const listMenub = document.querySelector(".headerb__menu--nav");
 const btnCloseb = document.querySelector(".menu__close");

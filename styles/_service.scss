@@ -1,0 +1,180 @@
+.service {
+  padding: 30px 0 70px;
+  position: relative;
+  .slick-track {
+    height: 400px;
+    @include tablet-plus {
+      height: 320px;
+    }
+    @include tablet {
+      height: 300px;
+    }
+    @include tablet1 {
+      height: auto;
+    }
+  }
+  span {
+    font-size: 40px;
+    font-weight: bold;
+    -webkit-text-fill-color: $white__color;
+    -webkit-text-stroke-width: 1px;
+    &.service__count {
+      position: absolute;
+      content: "";
+      top: 70%;
+      left: 44%;
+      transform: translateX(-50%);
+      @include desktop {
+        top: 65%;
+      }
+    }
+    @include tablet-plus {
+      display: none;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    color: $dark__color;
+    font-size: 34px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    @include tablet1 {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+  }
+  &__main {
+    width: 85vw;
+    margin: auto;
+    @include desktop {
+      width: 95vw;
+    }
+    @include tablet-plus {
+      width: 90vw;
+    }
+    @include tablet {
+      width: 90vw;
+    }
+    @include tablet-sm {
+      width: 90%;
+    }
+    @include mobile-plus {
+      width: 85vw;
+    }
+    &--item {
+      width: 100%;
+      &--content {
+        margin-left: 25%;
+        @include desktop-plus {
+          margin-left: 15%;
+        }
+        @include tablet-plus {
+          margin-left: 0;
+          padding: 0 15px;
+        }
+        @include tablet {
+          padding: 0;
+        }
+        h4 {
+          font-weight: bold;
+          font-size: 25px;
+          margin-top: 50px;
+          line-height: 1.5;
+          margin-bottom: 10px;
+          @include desktop-plus {
+            margin-top: 25px;
+          }
+          @include tablet-plus {
+            margin-top: 0;
+          }
+          @include tablet {
+            font-size: 20px;
+            line-height: 1.3;
+          }
+        }
+        p {
+          line-height: 1.5;
+          margin: 0 0 10px;
+          color: $dark--gray__color;
+          @include tablet {
+            line-height: 1.3;
+          }
+        }
+        a {
+          color: $dark--gray__color;
+          position: relative;
+          padding-bottom: 5px;
+          &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: $orange__color;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+      &--img {
+        padding-left: 30px;
+        @include tablet-plus {
+          padding-right: 1px;
+        }
+        @include tablet {
+          padding-left: 15px;
+        }
+        @include tablet1 {
+          padding: 0;
+          padding-right: 1px;
+          margin-top: 30px;
+        }
+        @include tablet-sm {
+          padding-left: 1px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 0px;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include tablet {
+      bottom: -7%;
+    }
+    @include mobile {
+      margin-top: 0.5rem;
+    }
+
+    li {
+      background-color: $light--gray__color;
+      padding: 5px 10px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid $white__color;
+      background-color: $light__color;
+    }
+    .slick-active button {
+      border: 1px solid $white__color;
+      background-color: $light--gray__color;
+    }
+  }
+}

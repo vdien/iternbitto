@@ -1,0 +1,102 @@
+.news {
+  padding: 40px 0;
+  &__title {
+    text-align: center;
+    color: $white__color;
+    font-size: 34px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    @include tablet1 {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+  }
+  &__main {
+    width: 85vw;
+    margin: auto;
+    @include desktop {
+      width: 95vw;
+    }
+    @include tablet-plus {
+      width: 90vw;
+    }
+    @include tablet {
+      width: 90vw;
+    }
+    @include tablet-sm {
+      width: 90%;
+    }
+    @include mobile-plus {
+      width: 85vw;
+    }
+    &--box {
+      width: 100%;
+      background-color: $white__color;
+      position: relative;
+      display: flex;
+     
+
+      @include tablet {
+        min-height: 250px;
+        margin-bottom: 30px;
+      }
+      @include tablet-sm {
+        min-height: 210px;
+      }
+      &--img {
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &--content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        padding: 15px;
+        h4 {
+          color: $orange__color;
+          font-weight: bold;
+          font-size: 14px;
+          margin: 0;
+        }
+        p {
+          width: 100%;
+          margin-right: 15px;
+          height: 60px;
+          margin-bottom: 10px;
+          padding-top: 5px;
+          position: relative;
+          a {
+            font-weight: bold;
+            font-size: 16px;
+            color: $white__color;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            width: 40%;
+            height: 4px;
+            background-color: $orange__color;
+            bottom: 0;
+            left: 0;
+            transition: 0.4s;
+            transform: scaleX(0);
+            transform-origin: 0 50%;
+          }
+          &:hover::before {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}
+.bg__news {
+  background-image: url(../images/bg-blog.png);
+}

@@ -1,0 +1,25 @@
+.scrollToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px 15px;
+  color: $white__color;
+  background-color: $orange__color;
+  border: 0;
+  outline: 0;
+  opacity: 0;
+  z-index: 99;
+  transition: all 0.4s;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.5;
+  display: none;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.visible {
+    opacity: 0.9;
+  }
+}

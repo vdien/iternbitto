@@ -1,0 +1,192 @@
+.footer {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  &__main {
+    width: 85vw;
+    margin: auto;
+    @include desktop {
+      width: 95vw;
+    }
+    @include tablet-plus {
+      width: 90vw;
+    }
+    @include tablet {
+      width: 90vw;
+    }
+    @include tablet-sm {
+      width: 90%;
+    }
+    @include mobile-plus {
+      width: 85vw;
+    }
+  }
+  &__top {
+    padding: 60px 0px 50px;
+    &--logo {
+      padding-right: 15px;
+      .logo__footer {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &--list {
+        list-style: none;
+        li {
+          color: $white__color;
+          margin-bottom: 10px;
+          font-size: 16px;
+          line-height: 1.5;
+          i {
+            color: $orange__color;
+            margin-right: 5px;
+          }
+          a {
+            color: $white__color;
+            &:hover {
+              color: $orange__color;
+            }
+          }
+        }
+      }
+    }
+    &--link {
+      padding: 0 15px;
+      @include tablet-plus {
+        padding: 0;
+      }
+      &--list {
+        ul {
+          list-style: none;
+          li {
+            padding-bottom: 15px;
+
+            a {
+              color: $white__color;
+              &:hover {
+                color: $orange__color;
+              }
+            }
+          }
+        }
+      }
+    }
+    &--tag {
+      &--list {
+        a {
+          border-radius: 0;
+          color: $white__color;
+          display: inline-block;
+          padding: 0.2em 0.6em 0.3em;
+          margin-bottom: 10px;
+          margin-right: 5px;
+          font-size: 13px;
+          line-height: 1.3;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: baseline;
+          border: 1px solid $white__color;
+          &:hover {
+            background-color: $orange__color;
+            color: $dark__color;
+          }
+        }
+      }
+    }
+    &--social {
+      &--list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include tablet-plus {
+          justify-content: flex-start;
+        }
+        li {
+          margin: 0 5px;
+          @include tablet-plus {
+            margin: 0 10px;
+          }
+          @include mobile {
+            margin: 0 5px;
+          }
+          @include mobile-sm {
+            margin: 0;
+          }
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            background-color: $orange__color;
+            color: $black__color;
+            text-align: center;
+            padding: 6px 0;
+            margin-bottom: 10px;
+            i {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__content {
+    padding: 60px 0px 50px;
+    &--list {
+      list-style: none;
+      li {
+        padding-bottom: 15px;
+        a {
+          color: $white__color;
+          &:hover {
+            color: $orange__color;
+          }
+        }
+      }
+    }
+  }
+  &__bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(196, 196, 196, 0.5);
+    p {
+      color: $white__color;
+      span {
+        color: $orange__color;
+      }
+    }
+  }
+  .title__footer {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: $white__color;
+    line-height: 1.3;
+    font-weight: bold;
+    margin-top: 10px;
+    @include tablet-plus {
+      margin-top: 15px;
+    }
+    &.content {
+      cursor: pointer;
+      &:hover {
+        color: $orange__color;
+      }
+    }
+    &::before {
+      position: absolute;
+      top: calc(100% + 7px);
+      left: 0;
+      content: "";
+      width: 100px;
+      max-width: 100%;
+      height: 3px;
+      background-color: $orange__color;
+    }
+  }
+}

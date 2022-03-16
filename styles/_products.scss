@@ -1,0 +1,131 @@
+.product {
+  padding: 40px 0 70px;
+  @include tablet1 {
+    padding: 20px 0 40px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: $title__color;
+    @include tablet1 {
+      margin-bottom: 40px;
+    }
+    h4 {
+      font-size: 34px;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.4;
+      @include tablet1 {
+        font-size: 22px;
+      }
+    }
+  }
+  &__list {
+    width: 85vw;
+    margin: auto;
+    margin-bottom: 20px;
+
+    @include desktop {
+      width: 95vw;
+    }
+    @include tablet-plus {
+      width: 90vw;
+    }
+    @include tablet {
+      width: 90vw;
+    }
+    @include tablet-sm {
+      width: 90%;
+    }
+    @include mobile-plus {
+      width: 85vw;
+    }
+    &--item {
+      margin: 0 15px 30px;
+      border: 1px solid $light__color;
+      a {
+        img {
+          width: 100%;
+        }
+      }
+      &--info {
+        padding: 10px 15px;
+        a {
+          font-weight: bolder;
+          font-size: 1.2rem;
+          color: $black__color;
+          &:hover {
+            color: $orange__color;
+          }
+        }
+        p {
+          margin-top: 1rem;
+          padding-bottom: 1rem;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $light__color;
+            bottom: 0;
+            left: 0;
+          }
+          b {
+            font-size: 0.8rem;
+            font-weight: bolder;
+            color: $orange__color;
+          }
+          small {
+            font-weight: bolder;
+            font-size: 0.7rem;
+            color: $dark--gray__color;
+          }
+        }
+      }
+      .property {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        margin-top: 1rem;
+        &__item {
+          display: flex;
+          align-items: center;
+          font-size: 0.8rem;
+          img {
+            padding-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  &__btn {
+    text-align: center;
+    button {
+      background-color: $orange__color;
+
+      padding: 10px 40px;
+
+      border-radius: 10px;
+      border: 0;
+      @include tablet1 {
+        padding: 8px 20px;
+      }
+      a {
+        font-size: 16px;
+        letter-spacing: 1.4px;
+        font-weight: 400;
+        color: $white__color;
+        font-weight: bold;
+        @include tablet1 {
+          font-size: 15px;
+        }
+      }
+      &:hover {
+        a {
+          color: $dark--gray__color;
+        }
+      }
+    }
+  }
+}

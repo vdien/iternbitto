@@ -10,10 +10,10 @@ function showScroll() {
   }
 }
 
-// btnScroll.addEventListener("click", () => {
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-// });
+btnScroll.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
 /// menu
 const btnOpen = document.querySelector(".header__menu--icon");
 const listMenu = document.querySelector(".header__menu--nav");

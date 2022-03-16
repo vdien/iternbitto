@@ -1,0 +1,127 @@
+.gallery {
+  padding: 40px 0;
+  @include tablet {
+    padding: 20px 0 70px;
+  }
+  .slick-button {
+    border-radius: unset;
+  }
+  .slick-slide {
+    height: unset;
+  }
+  .slick-track {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    @include tablet {
+      height: auto;
+    }
+  }
+  .slick-center {
+    img {
+      transition: 0.5s;
+      transition-delay: 0.3s;
+      height: 500px;
+    }
+    p {
+      padding: 30px 30px;
+      transition: 0.5s;
+      transition-delay: 0.3s;
+    }
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 0px;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include tablet {
+      bottom: -7%;
+    }
+    @include mobile {
+      margin-top: 0.5rem;
+    }
+
+    li {
+      background-color: $light--gray__color;
+      padding: 5px 10px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid $white__color;
+      background-color: $light__color;
+    }
+    .slick-active button {
+      border: 1px solid $white__color;
+      background-color: $light--gray__color;
+    }
+  }
+  &__title {
+    text-align: center;
+    color: $dark__color;
+    font-size: 34px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    @include tablet1 {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+  }
+  &__list {
+    width: 85vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    @include desktop {
+      width: 95vw;
+    }
+    @include tablet-plus {
+      width: 90vw;
+    }
+    @include tablet {
+      width: 90vw;
+    }
+    @include tablet-sm {
+      width: 90%;
+    }
+    @include mobile-plus {
+      width: 85vw;
+    }
+    &--item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin: 0 30px;
+      img {
+        width: 100%;
+        margin: 0 auto;
+        height: 430px;
+        transition: 0.5s;
+        @include tablet {
+          height: auto;
+        }
+      }
+      p {
+        padding: 10px 15px;
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        font-size: 1.2rem;
+        color: $white__color;
+      }
+    }
+  }
+}
